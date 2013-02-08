@@ -1,0 +1,449 @@
+GIT
+  remote: git://github.com/Shopify/liquid.git
+  revision: 50bd34fd788cd4680e222259cbb4f0fbe4372066
+  specs:
+    liquid (2.4.1)
+
+GIT
+  remote: git://github.com/greendog/spree.git
+  revision: c497534b588bf029e8ac58c4a2a76e7d891b5c6b
+  branch: 1-3-stable
+  specs:
+    spree (1.3.2.beta)
+      spree_api (= 1.3.2.beta)
+      spree_cmd (= 1.3.2.beta)
+      spree_core (= 1.3.2.beta)
+      spree_dash (= 1.3.2.beta)
+      spree_promo (= 1.3.2.beta)
+      spree_sample (= 1.3.2.beta)
+    spree_api (1.3.2.beta)
+      spree_core (= 1.3.2.beta)
+      versioncake (= 0.4.0)
+    spree_cmd (1.3.2.beta)
+      thor (>= 0.14.6)
+    spree_core (1.3.2.beta)
+      activemerchant (~> 1.29.3)
+      acts_as_list (= 0.1.4)
+      awesome_nested_set (= 2.1.5)
+      aws-sdk (~> 1.3.4)
+      cancan (= 1.6.8)
+      deface (>= 0.9.0)
+      ffaker (~> 1.12.0)
+      highline (= 1.6.11)
+      jquery-rails (~> 2.0.0)
+      kaminari (= 0.13.0)
+      money (= 5.0.0)
+      paperclip (~> 2.8)
+      rabl (= 0.7.2)
+      rails (~> 3.2.11)
+      ransack (~> 0.7.2)
+      select2-rails (~> 3.2)
+      state_machine (= 1.1.2)
+      stringex (~> 1.3.2)
+    spree_dash (1.3.2.beta)
+      httparty (~> 0.8.1)
+      spree_core (= 1.3.2.beta)
+    spree_promo (1.3.2.beta)
+      spree_core (= 1.3.2.beta)
+    spree_sample (1.3.2.beta)
+      spree_core (= 1.3.2.beta)
+
+GIT
+  remote: git://github.com/parndt/refinerycms-i18n.git
+  revision: a9a167477ef82c34cbe54f180df22fc02cd45ad8
+  branch: 2-0-stable
+  specs:
+    refinerycms-i18n (2.0.2)
+      refinerycms-core (~> 2.0.0)
+      routing-filter (>= 0.2.3)
+
+GIT
+  remote: git://github.com/parndt/refinerycms-settings.git
+  revision: 0848fc35d38a771e99944440228f6a502c075514
+  branch: 2-0-stable
+  specs:
+    refinerycms-settings (2.0.2)
+      acts_as_indexed (~> 0.7.7)
+      refinerycms-core (~> 2.0.1)
+
+GIT
+  remote: git://github.com/refinery/refinerycms.git
+  revision: 4925207b4a542b8a92871717064394e27ee45393
+  branch: 2-0-stable
+  specs:
+    refinerycms (2.0.9)
+      bundler (~> 1.0)
+      refinerycms-authentication (= 2.0.9)
+      refinerycms-core (= 2.0.9)
+      refinerycms-dashboard (= 2.0.9)
+      refinerycms-images (= 2.0.9)
+      refinerycms-pages (= 2.0.9)
+      refinerycms-resources (= 2.0.9)
+    refinerycms-authentication (2.0.9)
+      devise (~> 2.0.5)
+      orm_adapter (~> 0.0.7)
+      refinerycms-core (= 2.0.9)
+    refinerycms-core (2.0.9)
+      acts_as_indexed (~> 0.7.7)
+      awesome_nested_set (~> 2.1.3)
+      coffee-rails (~> 3.2.1)
+      friendly_id (~> 4.0.9)
+      globalize3 (~> 0.3.0)
+      jquery-rails (~> 2.0.0)
+      rails (>= 3.1.10, < 3.3, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.10, != 3.2.1, != 3.2.0)
+      sass-rails (~> 3.2.3)
+      truncate_html (~> 0.5.5)
+      uglifier (>= 1.0.3)
+      will_paginate (~> 3.0.2)
+    refinerycms-dashboard (2.0.9)
+      refinerycms-core (= 2.0.9)
+    refinerycms-images (2.0.9)
+      dragonfly (~> 0.9.8)
+      rack-cache (>= 0.5.3)
+      refinerycms-core (= 2.0.9)
+    refinerycms-pages (2.0.9)
+      awesome_nested_set (~> 2.1.3)
+      babosa (!= 0.3.6)
+      refinerycms-core (= 2.0.9)
+      seo_meta (~> 1.3.0)
+    refinerycms-resources (2.0.9)
+      dragonfly (~> 0.9.8)
+      rack-cache (>= 0.5.3)
+      refinerycms-core (= 2.0.9)
+
+GIT
+  remote: git://github.com/resolve/refinerycms-blog.git
+  revision: 7eaa7cf7e44c0affa307dd947c29aacb3e61a33b
+  branch: 2-0-stable
+  specs:
+    refinerycms-blog (2.0.4)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      rails_autolink
+      refinerycms-core (~> 2.0.3)
+      refinerycms-settings (~> 2.0.1)
+      seo_meta (~> 1.3.0)
+
+GIT
+  remote: git://github.com/resolve/refinerycms-inquiries.git
+  revision: 9b31acf5f60ed5ed92095ebf0aa3a73a1085be9c
+  branch: 2-0-stable
+  specs:
+    refinerycms-inquiries (2.0.3)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 2.0.1)
+      refinerycms-settings (~> 2.0.1)
+
+GIT
+  remote: git://github.com/shoponrails/clots.git
+  revision: 3a1255eaceefe05e4028bf7e94d2239fb61e55e4
+  specs:
+    clot_engine (1.1)
+      mongo_mapper (>= 0.12.0)
+
+GIT
+  remote: git://github.com/shoponrails/spree_last_address.git
+  revision: b11e6ebc3421ea73a37828f0fca494abdaaa6e20
+  specs:
+    spree_last_address (1.0.0)
+      spree_core (~> 1.0)
+
+GIT
+  remote: git://github.com/shoponrails/spreefinery_core.git
+  revision: 22043cf4fb7c6c62414999d49bcd04f9f4c9bb88
+  specs:
+    spreefinery_core (0.0.1)
+      refinerycms (>= 2.0.9)
+      spree (>= 1.3.0)
+
+GIT
+  remote: git://github.com/shoponrails/spreefinery_single_page_checkout.git
+  revision: 972fc5005217bca272d871ea940a72a4bce1b5cd
+  specs:
+    spreefinery_single_page_checkout (1.3.2.beta)
+      refinerycms-core (>= 2.0.9)
+      spree_core (~> 1.3.2.beta)
+
+GIT
+  remote: git://github.com/shoponrails/spreefinery_themes.git
+  revision: f84ba9a1784ebb71ca29e76c3a4070f888d4d327
+  specs:
+    spreefinery_themes (1.0)
+      clot_engine
+      rubyzip
+      spreefinery_core
+
+GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: 00bc1308542a75169825dc29c44e97729fd86a63
+  specs:
+    spree_i18n (1.0.0)
+      i18n (~> 0.6)
+      spree_core
+
+GIT
+  remote: git://github.com/spree/spree_usa_epay.git
+  revision: e47024220dcc4f3bf851f358c0559d02fb2c3059
+  specs:
+    spree_usa_epay (1.0.2)
+      savon (= 1.2.0)
+      spree_core (>= 1.0.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionmailer (3.2.11)
+      actionpack (= 3.2.11)
+      mail (~> 2.4.4)
+    actionpack (3.2.11)
+      activemodel (= 3.2.11)
+      activesupport (= 3.2.11)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.4)
+      rack (~> 1.4.0)
+      rack-cache (~> 1.2)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.2.1)
+    active_utils (1.0.5)
+      activesupport (>= 2.3.11)
+      i18n
+    activemerchant (1.29.3)
+      active_utils (>= 1.0.2)
+      activesupport (>= 2.3.14)
+      builder (>= 2.0.0)
+      i18n
+      json (>= 1.5.1)
+      money
+      nokogiri
+    activemodel (3.2.11)
+      activesupport (= 3.2.11)
+      builder (~> 3.0.0)
+    activerecord (3.2.11)
+      activemodel (= 3.2.11)
+      activesupport (= 3.2.11)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activeresource (3.2.11)
+      activemodel (= 3.2.11)
+      activesupport (= 3.2.11)
+    activesupport (3.2.11)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    acts-as-taggable-on (2.3.3)
+      rails (~> 3.0)
+    acts_as_indexed (0.7.8)
+    acts_as_list (0.1.4)
+    akami (1.2.0)
+      gyoku (>= 0.4.0)
+      nokogiri (>= 1.4.0)
+    arel (3.0.2)
+    awesome_nested_set (2.1.5)
+      activerecord (>= 3.0.0)
+    aws-sdk (1.3.9)
+      httparty (~> 0.7)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
+    babosa (0.3.9)
+    bcrypt-ruby (3.0.1)
+    bson (1.8.2)
+    builder (3.0.4)
+    cancan (1.6.8)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.4.0)
+    deface (0.9.1)
+      nokogiri (~> 1.5.0)
+      rails (~> 3.1)
+    devise (2.0.5)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      railties (~> 3.1)
+      warden (~> 1.1.1)
+    dragonfly (0.9.13)
+      multi_json (~> 1.0)
+      rack
+    erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    ffaker (1.12.1)
+    filters_spam (0.3)
+    friendly_id (4.0.9)
+    git (1.2.5)
+    globalize3 (0.3.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      paper_trail (~> 2)
+    gyoku (0.4.6)
+      builder (>= 2.1.2)
+    highline (1.6.11)
+    hike (1.2.1)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
+    httpi (1.1.1)
+      rack
+    i18n (0.6.1)
+    jeweler (1.8.4)
+      bundler (~> 1.0)
+      git (>= 1.2.5)
+      rake
+      rdoc
+    journey (1.0.4)
+    jquery-rails (2.0.3)
+      railties (>= 3.1.0, < 5.0)
+      thor (~> 0.14)
+    json (1.7.6)
+    kaminari (0.13.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      railties (>= 3.0.0)
+    mail (2.4.4)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.20.1)
+    money (5.0.0)
+      i18n (~> 0.4)
+      json
+    mongo (1.8.2)
+      bson (~> 1.8.2)
+    mongo_mapper (0.12.0)
+      activemodel (~> 3.0)
+      activesupport (~> 3.0)
+      plucky (~> 0.5.2)
+    multi_json (1.5.0)
+    multi_xml (0.5.3)
+    nokogiri (1.5.6)
+    nori (1.1.4)
+    orm_adapter (0.0.7)
+    paper_trail (2.7.0)
+      activerecord (~> 3.0)
+      railties (~> 3.0)
+    paperclip (2.8.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
+    plucky (0.5.2)
+      mongo (~> 1.5)
+    polyamorous (0.5.0)
+      activerecord (~> 3.0)
+    polyglot (0.3.3)
+    rabl (0.7.2)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
+    rack (1.4.5)
+    rack-cache (1.2)
+      rack (>= 0.4)
+    rack-ssl (1.3.3)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (3.2.11)
+      actionmailer (= 3.2.11)
+      actionpack (= 3.2.11)
+      activerecord (= 3.2.11)
+      activeresource (= 3.2.11)
+      activesupport (= 3.2.11)
+      bundler (~> 1.0)
+      railties (= 3.2.11)
+    rails_autolink (1.0.9)
+      rails (~> 3.1)
+    railties (3.2.11)
+      actionpack (= 3.2.11)
+      activesupport (= 3.2.11)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (>= 0.14.6, < 2.0)
+    rake (10.0.3)
+    ransack (0.7.3)
+      actionpack (~> 3.0)
+      activerecord (~> 3.0)
+      polyamorous (~> 0.5.0)
+    rdoc (3.12.1)
+      json (~> 1.4)
+    routing-filter (0.3.1)
+      actionpack
+    rubyzip (0.9.9)
+    sass (3.2.5)
+    sass-rails (3.2.6)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
+    savon (1.2.0)
+      akami (~> 1.2.0)
+      builder (>= 2.1.2)
+      gyoku (~> 0.4.5)
+      httpi (~> 1.1.0)
+      nokogiri (>= 1.4.0)
+      nori (~> 1.1.0)
+      wasabi (~> 2.5.0)
+    select2-rails (3.2.1)
+      thor (~> 0.14)
+    seo_meta (1.3.0)
+      railties (>= 3.0.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
+    sprockets (2.2.2)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    state_machine (1.1.2)
+    stringex (1.3.3)
+    thor (0.17.0)
+    tilt (1.3.3)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    truncate_html (0.5.5)
+    tzinfo (0.3.35)
+    uglifier (1.3.0)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
+    uuidtools (2.1.3)
+    versioncake (0.4.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+    warden (1.1.1)
+      rack (>= 1.0)
+    wasabi (2.5.1)
+      httpi (~> 1.0)
+      nokogiri (>= 1.4.0)
+    will_paginate (3.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (>= 1.0.0)
+  clot_engine!
+  jeweler (>= 1.8.3)
+  liquid!
+  refinerycms!
+  refinerycms-blog!
+  refinerycms-i18n!
+  refinerycms-inquiries!
+  refinerycms-settings!
+  simplecov
+  spree!
+  spree_i18n!
+  spree_last_address!
+  spree_usa_epay!
+  spreefinery_core!
+  spreefinery_single_page_checkout!
+  spreefinery_themes!
