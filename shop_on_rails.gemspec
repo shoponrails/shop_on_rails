@@ -10,20 +10,30 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zee Yang, Alexander Negoda"]
   s.date = "2013-02-08"
-  s.description = "TODO: longer description of your gem"
+  s.description = " ShopOnRails.com  "
   s.email = "zee.yang@gmail.com, alexander.negoda@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
   ]
   s.files = [
-    "VERSION"
+    ".document",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE.txt",
+    "README.rdoc",
+    "Rakefile",
+    "VERSION",
+    "lib/shop_on_rails.rb",
+    "shop_on_rails.gemspec",
+    "test/helper.rb",
+    "test/test_shop_on_rails.rb"
   ]
   s.homepage = "https://github.com/shoponrails/shop_on_rails"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "ShopOnRails.com"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
