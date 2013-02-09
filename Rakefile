@@ -13,7 +13,6 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "shop_on_rails"
   gem.homepage = "https://github.com/shoponrails/shop_on_rails"
   gem.license = "MIT"
@@ -21,7 +20,6 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{ ShopOnRails.com  }
   gem.email = "zee.yang@gmail.com, alexander.negoda@gmail.com"
   gem.authors = ["Zee Yang, Alexander Negoda"]
-  # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
 
