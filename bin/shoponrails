@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-require 'shop_on_rails'
+require 'shop_on_rails_cmd'
