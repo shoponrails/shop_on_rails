@@ -20,6 +20,7 @@ namespace :shop_on_rails do
   desc 'Refresh db with the Spree samples'
   task :refresh_db_with_samples => :environment do
     `rm -rf #{Rails.root}/public/spree`
+    `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db`
     `cd #{Rails.root} && bundle exec rake spree_sample:load`
   end
 
