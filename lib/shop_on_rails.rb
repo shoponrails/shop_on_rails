@@ -1,0 +1,1 @@
+require "shop_on_rails/engine"
