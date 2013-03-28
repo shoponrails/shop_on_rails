@@ -4,10 +4,10 @@ Gem::Specification.new do |s|
   s.name = "shop_on_rails"
   s.version = "0.0.1"
 
-  s.authors = ["Zee Yang, Alexander Negoda"]
+  s.authors = ["Alexander Negoda"]
   s.date = "2013-02-09"
-  s.description = " ShopOnRails.com "
-  s.email = "zee.yang@gmail.com, alexander.negoda@gmail.com"
+  s.description = " ShopOnRails.org "
+  s.email = "alexander.negoda@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "ShopOnRails.com"
+  s.summary = "ShopOnRails.org"
   s.required_ruby_version = '>= 1.9.3'
   s.bindir        = 'bin'
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

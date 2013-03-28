@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2013 Zee Yang, Alexander Negoda. See LICENSE.txt for
+Copyright (c) 2013 Alexander Negoda. See LICENSE.txt for
 further details.
 
