@@ -18,8 +18,8 @@ Jeweler::Tasks.new do |gem|
   gem.license = "MIT"
   gem.summary = %Q{ ShopOnRails.com  }
   gem.description = %Q{ ShopOnRails.com  }
-  gem.email = "zee.yang@gmail.com, alexander.negoda@gmail.com"
-  gem.authors = ["Zee Yang, Alexander Negoda"]
+  gem.email = "alexander.negoda@gmail.com"
+  gem.authors = ["Alexander Negoda"]
 end
 Jeweler::RubygemsDotOrgTasks.new
 
