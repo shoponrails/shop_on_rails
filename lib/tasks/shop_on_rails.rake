@@ -2,8 +2,8 @@ namespace :shop_on_rails do
   desc 'Fresh setup with the Spree samples'
   task :setup_with_samples => :environment do
     `rm -rf #{Rails.root}/public/spree`
-    `cd #{Rails.root} && bundle exec rake shop_on_rails:setup`
-    `cd #{Rails.root} && bundle exec rake spree_sample:load`
+    `cd #{Rails.root} && bundle exec rake shop_on_rails:setup --trace`
+    `cd #{Rails.root} && bundle exec rake spree_sample:load --trace`
   end
 
   desc 'Refresh db without the Spree samples'
@@ -20,8 +20,8 @@ namespace :shop_on_rails do
   desc 'Refresh db with the Spree samples'
   task :refresh_db_with_samples => :environment do
     `rm -rf #{Rails.root}/public/spree`
-    `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db`
-    `cd #{Rails.root} && bundle exec rake spree_sample:load`
+    `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db --trace`
+    `cd #{Rails.root} && bundle exec rake spree_sample:load --trace`
   end
 
 
