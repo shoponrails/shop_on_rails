@@ -23,12 +23,12 @@ Gem::Specification.new do |s|
   s.bindir        = 'bin'
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
-  s.add_dependency(%q<spreefinery_core>, [">= 0"])
-  s.add_dependency(%q<spreefinery_themes>, [">= 0"])
-  #s.add_dependency(%q<spreefinery_single_page_checkout>, [">= 0"])
-  s.add_dependency(%q<refinerycms-blog>, [">= 0"])
-  s.add_dependency(%q<refinerycms-inquiries>, [">= 0"])
+  #s.add_dependency 'spreefinery_core'
+  #s.add_dependency 'spreefinery_themes'
+  #s.add_dependency 'refinerycms-blog', '>= 2.0.9'
+  #s.add_dependency 'refinerycms-inquiries', '>= 2.0.9'
 
+  s.add_development_dependency 'gemcutter'
   s.add_development_dependency(%q<jeweler>, [">= 1.8.3"])
   s.add_development_dependency(%q<simplecov>, [">= 0"])
 

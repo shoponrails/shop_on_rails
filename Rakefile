@@ -16,8 +16,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "shop_on_rails"
   gem.homepage = "https://github.com/shoponrails/shop_on_rails"
   gem.license = "MIT"
-  gem.summary = %Q{ ShopOnRails.com  }
-  gem.description = %Q{ ShopOnRails.com  }
+  gem.summary = %Q{ ShopOnRails.org  }
+  gem.description = %Q{ ShopOnRails.org  }
   gem.email = "alexander.negoda@gmail.com"
   gem.authors = ["Alexander Negoda"]
 end
