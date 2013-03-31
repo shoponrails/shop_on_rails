@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     shop_on_rails (0.0.1)
-      thor (>= 0.14.6)
+      shop_on_rails
 
 GEM
   remote: http://rubygems.org/
@@ -23,7 +23,6 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    thor (0.18.1)
 
 PLATFORMS
   ruby
