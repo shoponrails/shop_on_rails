@@ -12,8 +12,9 @@ namespace :shop_on_rails do
       ActiveRecord::Base.connection.drop_table x
     end
 
-    Rake::Task['db:migrate'].invoke
-    Rake::Task['db:seed'].invoke
+    `cd #{Rails.root} && bundle exec rake db:migrate --trace`
+    `cd #{Rails.root} && bundle exec rake db:seed --trace`
+
     SpreefineryCore::Engine.load_seed
   end
 
