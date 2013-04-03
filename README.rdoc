@@ -1,6 +1,6 @@
 = shop_on_rails
 
-Description goes here.
+The installation process: https://gist.github.com/greendog/4985240
 
 == Contributing to shop_on_rails
  
