@@ -2,6 +2,9 @@
 
 The installation process: https://gist.github.com/greendog/4985240
 
+
+![Example Front Page](https://docs.google.com/file/d/0Bwxa_189GC2OZXNKb3FjYWwtSkE/edit?usp=sharing)
+
 == Contributing to shop_on_rails
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
