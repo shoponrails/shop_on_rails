@@ -48,7 +48,7 @@ namespace :shop_on_rails do
     puts "Invoking: bundle exec rails g spree:install --migrate=false --sample=false --seed=false --user_class=Refinery::User ..."
     `cd #{Rails.root} && bundle exec rails g spree:install --migrate=false --sample=false --seed=false --user_class=Refinery::User`
     puts "Invoking: bundle exec rails g refinery:cms --fresh-installation ..."
-    `cd #{Rails.root} && bundle exec rails g refinery:cms --fresh-installation`
+    `cd #{Rails.root} && bundle exec rails g refinery:cms --fresh-installation --skip_db --skip_migrations`
     puts "Invoking: bundle exec rails g refinery:i18n ..."
     `cd #{Rails.root} && bundle exec rails g refinery:i18n`
     puts "Invoking: bundle exec rails g refinery:pages ..."
