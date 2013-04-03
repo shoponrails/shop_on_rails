@@ -1,9 +1,9 @@
-= shop_on_rails
+## shop_on_rails
 
 The installation process: https://gist.github.com/greendog/4985240
 
 
-![Example Front Page](https://docs.google.com/file/d/0Bwxa_189GC2OZXNKb3FjYWwtSkE/edit?usp=sharing)
+![Example Front Page](http://www.gdriveurl.com/?idl=613650319782&out=1)
 
 == Contributing to shop_on_rails
  
