@@ -2,8 +2,9 @@
 
 The installation process: https://gist.github.com/greendog/4985240
 
+Some screenshots:
 
-![Example Front Page](http://www.gdriveurl.com/?idl=613650319782&out=1)
+![Example Front Page](https://drive.google.com/uc?id=0Bwxa_189GC2OZXNKb3FjYWwtSkE)
 
 == Contributing to shop_on_rails
  
