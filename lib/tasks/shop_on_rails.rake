@@ -32,6 +32,7 @@ namespace :shop_on_rails do
     `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db --trace`
     puts "Invoking: bundle exec rake spree_sample:load --trace..."
     `cd #{Rails.root} && bundle exec rake spree_sample:load --trace`
+    `cd #{Rails.root} && bundle exec rake shop_on_rails:fake_db --trace`
   end
 
 
@@ -64,4 +65,76 @@ namespace :shop_on_rails do
     puts "Invoking: bundle exec rake shop_on_rails:refresh_db ..."
     `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db`
   end
+
+  desc 'Refresh db without the Spree samples'
+  task :fake_db => :environment do
+    puts "Generate fake data..."
+
+    10.times.map {
+      user = Refinery::User.create(:email => Faker::Internet.email, :username => Faker::Internet.user_name, :password => "password",
+                                   :password_confirmation => "password")
+
+      user.add_role(:refinery)
+    }
+
+    Refinery::Page.all.each do |page|
+      page.parts.clear
+      page.update_attribute(:view_template, "homepage")
+      page.update_attribute(:layout_template, "site")
+
+      %W(left_sidebar body right_sidebar).each do |part|
+        ::Refinery::PagePart.create(title: part,
+                                    body: "<h1>#{part.camelcase}</h1>#{Faker::Lorem.paragraphs(rand(5..7)).join}".html_safe,
+                                    refinery_page_id: page.id
+        )
+      end
+    end
+
+    herounit = <<-ERB
+    <h1>Hello, world!</h1>
+    <p>This is a template for a simple marketing or informational website. It includes a large callout called the
+      hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
+    ERB
+
+    frontpage = Refinery::Page.find_by_slug("home")
+    frontpage.parts << ::Refinery::PagePart.create(title: "hero-unit", body: herounit.html_safe, refinery_page_id: frontpage.id)
+    frontpage.save
+
+    Refinery::Blog::Category.all.map { |c|
+      c.posts.clear
+      c.destroy
+    }
+    10.times.map {
+      Refinery::Blog::Category.create(:title => Faker::Lorem.words(rand(2..4)).join(' '))
+    }
+
+    Refinery::Blog::Post.all.map { |c| c.destroy }
+
+    20.times.map {
+      Refinery::Blog::Post.create(
+          :title => Faker::Lorem.sentence,
+          :body => Faker::Lorem.paragraphs(rand(5..7)).join,
+          :draft => false,
+          :author => Refinery::User.first,
+          :published_at => (Time.now - rand(1..20).day),
+          :custom_teaser => Faker::Lorem.paragraphs(rand(2..3)).join,
+          :category_ids => ::Refinery::Blog::Category.offset(rand(Refinery::Blog::Category.count)).map(&:id),
+          :tag_list => Faker::Lorem.words(rand(4..6)).join(', ')
+      )
+    }
+
+    100.times.map {
+      user = ::Refinery::User.offset(rand(::Refinery::User.count)).first
+      comment = ::Refinery::Blog::Comment.new(
+          :name => user.username,
+          :email => user.email,
+          :message => Faker::Lorem.paragraphs(rand(2..4)).join
+      )
+      comment.save(:validate => false)
+      comment.approve!
+      Refinery::Blog::Post.offset(rand(Refinery::Blog::Post.count)).first.comments << comment
+    }
+  end
+
 end
