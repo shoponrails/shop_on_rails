@@ -135,6 +135,8 @@ namespace :shop_on_rails do
       comment.approve!
       Refinery::Blog::Post.offset(rand(Refinery::Blog::Post.count)).first.comments << comment
     }
+
+
   end
 
 end
