@@ -111,20 +111,20 @@ namespace :shop_on_rails do
 
     Refinery::Blog::Post.all.map { |c| c.destroy }
 
-    20.times.map {
+    30.times.map {
       Refinery::Blog::Post.create(
           :title => Faker::Lorem.sentence,
           :body => Faker::Lorem.paragraphs(rand(5..7)).join,
           :draft => false,
           :author => Refinery::User.first,
-          :published_at => (Time.now - rand(1..20).day),
+          :published_at => (Time.now - rand(1..40).day),
           :custom_teaser => Faker::Lorem.paragraphs(rand(2..3)).join,
           :category_ids => ::Refinery::Blog::Category.offset(rand(Refinery::Blog::Category.count)).map(&:id),
           :tag_list => Faker::Lorem.words(rand(4..6)).join(', ')
       )
     }
 
-    100.times.map {
+    200.times.map {
       user = ::Refinery::User.offset(rand(::Refinery::User.count)).first
       comment = ::Refinery::Blog::Comment.new(
           :name => user.username,
@@ -134,6 +134,15 @@ namespace :shop_on_rails do
       comment.save(:validate => false)
       comment.approve!
       Refinery::Blog::Post.offset(rand(Refinery::Blog::Post.count)).first.comments << comment
+    }
+
+    100.times.map{
+      Refinery::News::Item.create(
+          :title => Faker::Lorem.sentence,
+          :content => Faker::Lorem.paragraphs(rand(5..7)).join,
+          :publish_date => (Time.now - rand(1..20).day),
+          :expiration_date => (Time.now + rand(10..20).day)
+      )
     }
 
 
