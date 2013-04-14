@@ -68,7 +68,7 @@ namespace :shop_on_rails do
 
   desc 'Refresh db without the Spree samples'
   task :fake_db => :environment do
-    puts "Generate fake data..."
+    puts "Generate test data..."
 
     10.times.map {
       user = Refinery::User.create(:email => Faker::Internet.email, :username => Faker::Internet.user_name, :password => "password",
@@ -77,15 +77,37 @@ namespace :shop_on_rails do
       user.add_role(:refinery)
     }
 
+    3.times.map{
+      Refinery::Page.create(
+          :parent_id => Refinery::Page.find_by_slug('about').id,
+          :title => Faker::Lorem.sentence,
+          :menu_title => Faker::Lorem.words(2).join(' ').capitalize,
+          :deletable => true,
+          :show_in_menu => true
+          #:view_template => '',
+          #:layout_template => ''
+      )
+    }
+
+    Refinery::Page.create(
+        :title => 'Products Page',
+        :menu_title => "Products",
+        :deletable => true,
+        :link_url => '/products',
+        :show_in_menu => true
+    )
+
+
     Refinery::Page.all.each do |page|
       page.parts.clear
       page.update_attribute(:view_template, "homepage")
       page.update_attribute(:layout_template, "site")
 
-      %W(left_sidebar body right_sidebar).each do |part|
-        ::Refinery::PagePart.create(title: part,
-                                    body: "<h1>#{part.camelcase}</h1>#{Faker::Lorem.paragraphs(rand(5..7)).join}".html_safe,
-                                    refinery_page_id: page.id
+      Refinery::Pages.default_parts.each_with_index.each_with_index do |part, index|
+        ::Refinery::PagePart.create(title: part.first,
+                                    body: "<h1>#{part.first.camelcase}</h1>#{Faker::Lorem.paragraphs(rand(5..7)).join}".html_safe,
+                                    refinery_page_id: page.id,
+                                    :position => index
         )
       end
     end
@@ -124,7 +146,7 @@ namespace :shop_on_rails do
       )
     }
 
-    200.times.map {
+    100.times.map {
       user = ::Refinery::User.offset(rand(::Refinery::User.count)).first
       comment = ::Refinery::Blog::Comment.new(
           :name => user.username,
