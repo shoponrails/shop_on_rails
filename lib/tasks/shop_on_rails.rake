@@ -42,9 +42,6 @@ namespace :shop_on_rails do
     `cd #{Rails.root} &&  mkdir themes`
      puts "Checkout a default theme..."
     `cd #{Rails.root}/themes && git clone git://github.com/shoponrails/spreefinery_default_theme.git default`
-    puts "Checkout a spockets theme..."
-    `cd #{Rails.root}/themes && git clone git://github.com/shoponrails/spreefinery_default_theme.git sprockets`
-    `cd #{Rails.root}/themes/sprockets && git checkout -b sprockets origin/sprockets`
 
     puts "Invoking: bundle exec rails g spree:install --migrate=false --sample=false --seed=false --user_class=Refinery::User ..."
     `cd #{Rails.root} && bundle exec rails g spree:install --migrate=false --sample=false --seed=false --user_class=Refinery::User`
@@ -68,7 +65,7 @@ namespace :shop_on_rails do
 
   desc 'Refresh db without the Spree samples'
   task :fake_db => :environment do
-    puts "Generate test data..."
+    puts 'Generate test data...'
 
     10.times.map {
       user = Refinery::User.create(:email => Faker::Internet.email, :username => Faker::Internet.user_name, :password => "password",
