@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/shoponrails/shop_on_rails.png)](https://codeclimate.com/github/shoponrails/shop_on_rails)
+
 ## shop_on_rails
 
 The installation process: https://gist.github.com/greendog/4985240
