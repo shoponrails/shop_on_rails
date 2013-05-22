@@ -8,6 +8,12 @@ Some screenshots:
 
 ![Example Front Page](https://drive.google.com/uc?id=0Bwxa_189GC2OZXNKb3FjYWwtSkE)
 
+TODOs
+=====
+
+* Major code cleanup
+* Tests
+
 == Contributing to shop_on_rails
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
