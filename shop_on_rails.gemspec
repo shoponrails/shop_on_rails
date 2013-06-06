@@ -16,16 +16,15 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.required_ruby_version = '>= 1.9.3'
 
-  gem.add_dependency "spreefinery_core", "0.0.1RC1"
-  gem.add_dependency "spreefinery_themes", "0.0.1RC1"
-  #s.add_dependency "spreefinery_single_page_checkout", "0.0.1RC1"
+  gem.add_dependency "spreefinery_core"
+  gem.add_dependency "spreefinery_themes"
   gem.add_dependency "refinerycms-blog"
   gem.add_dependency "refinerycms-inquiries"
-  gem.add_development_dependency(%q<jeweler>, [">= 1.8.3"])
-  gem.add_development_dependency(%q<simplecov>, [">= 0"])
+  gem.add_development_dependency(%q<jeweler>)
+  gem.add_development_dependency(%q<simplecov>)
 
   # Temporary hack until https://github.com/wycats/thor/issues/234 is fixed
-  gem.add_dependency 'thor', '>= 0.14.6'
+  gem.add_dependency 'thor'
 
 end
 
