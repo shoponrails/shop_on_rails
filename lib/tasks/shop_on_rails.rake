@@ -49,6 +49,8 @@ namespace :shop_on_rails do
     `cd #{Rails.root} && bundle exec rails g refinery:cms --fresh-installation --skip_db --skip_migrations`
     puts "Invoking: bundle exec rails g refinery:i18n ..."
     `cd #{Rails.root} && bundle exec rails g refinery:i18n`
+    puts "Invoking: bundle exec rails g spree_i18n:install"
+     `cd #{Rails.root} && bundle exec rails g spree_i18n:install`
     puts "Invoking: bundle exec rails g refinery:pages ..."
     `cd #{Rails.root} && bundle exec rails g refinery:pages`
     puts "Invoking: bundle exec rails g refinery:inquiries ..."
