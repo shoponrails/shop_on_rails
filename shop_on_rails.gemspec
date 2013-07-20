@@ -23,8 +23,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency(%q<jeweler>)
   gem.add_development_dependency(%q<simplecov>)
 
-  # Temporary hack until https://github.com/wycats/thor/issues/234 is fixed
-  gem.add_dependency 'thor'
-
 end
 
