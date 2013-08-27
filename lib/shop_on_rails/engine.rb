@@ -1,7 +1,5 @@
 module ShopOnRails
   class Engine < Rails::Engine
-    require 'spree_core'
-    require 'refinerycms-core'
 
     isolate_namespace ShopOnRails::Engine
     engine_name "shop_on_rails"

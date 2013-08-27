@@ -1,0 +1,40 @@
+#jsTree li a {
+    background: none;
+    border: none;
+    display: inline;
+    padding: 0;
+}
+
+#jsTree li {
+    margin-top: 0;
+}
+
+#jsTree ul {
+    margin: 0;
+    padding: 0;
+}
+
+iframe#preview {
+    width: 100%;
+    margin-top: 20px;
+    height: 400px;
+}
+
+.cm-liquid-tag {
+    color: #32273f;
+    background: #ead9ff;
+}
+
+.cm-liquid-variable {
+    color: #29739b;
+    background: #c2e0f0;
+}
+
+.CodeMirror-fullscreen {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}

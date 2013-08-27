@@ -1,0 +1,58 @@
+<%= render :partial => "refinery/themes/admin/shared/theme_assets" %>
+<%= render "refinery/themes/admin/shared/actions" %>
+
+<div id='records'>
+    <% if @themes.any? %>
+        <% current_theme = Refinery::Themes::Theme.current_theme_config %>
+        <table cellpadding="1" cellspacing="1" style="width: 100%; ">
+            <tbody>
+            <tr>
+                <td style="width: 70%">
+                    <%= link_to(image_tag("/themes/#{current_theme['config']['key']}/image.png",
+                                          {class: 'screenshot'}), "/themes/#{current_theme['config']['key']}/image.png",
+                                {class: 'fancybox', title: 'Preview Theme'}) %>
+                </td>
+                <td class="theme-info">
+                    <h1><%= current_theme['config']['name'] %><br><span>ver. <%= current_theme['config']['version'] %></span></h1>
+                    <span>by <%= current_theme['config']['author'] %></span>
+
+                    <p><%= current_theme['config']['description'] %></p>
+                    <% if current_theme['config']['key'].eql?('default') %>
+                        <p>
+                            <%= link_to t('refinery.themes.admin.themes.actions.reset'), '#',
+                                        :onclick => "Themes.resetToDefaultTheme('#{refinery.reset_themes_admin_themes_path}')",
+                                        :class => 'button' %>
+                        </p>
+                    <% end %>
+                </td>
+            </tr>
+
+            <% @themes.reject { |i| i['config'].eql?(current_theme['config']) }.each do |theme| %>
+                <tr>
+                    <td style="width: 70%">
+                        <%= link_to(image_tag("/themes/#{theme['config']['key']}/image.png", {class: 'screenshot'}), "/themes/#{theme['config']['key']}/image.png",
+                                    {class: 'fancybox', title: 'Preview Theme'}) %>
+                    </td>
+                    <td class="theme-info">
+                        <h1><%= theme['config']['name'] %><br><span>ver. <%= theme['config']['version'] %></span></h1>
+                        <span>by <%= theme['config']['author'] %></span>
+                        <p><%= theme['config']['description'] %></p>
+
+                        <p><%= link_to "Select Theme", "/refinery/themes/select_theme?key=#{theme['config']['key']}", {class: "button select_theme_button"} %>
+                            <%= image_tag "spinner.gif", :style => "display:none", :id => 'spinner', :class => "spinner" %>
+                        </p>
+                        <% if theme['config']['key'].eql?('default') %>
+                            <p>
+                                <%= link_to t('refinery.themes.admin.themes.actions.reset'), '#',
+                                            :onclick => "Themes.resetToDefaultTheme('#{refinery.reset_themes_admin_themes_path}')",
+                                            :class => 'button' %>
+                            </p>
+                        <% end %>
+                        <!--<p><%= link_to "Preview Theme", "/themes/#{theme['config']['key']}/image.png", class: "fancybox button" %></p>-->
+                    </td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+    <% end %>
+</div>

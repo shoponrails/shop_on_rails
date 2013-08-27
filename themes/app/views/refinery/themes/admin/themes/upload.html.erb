@@ -1,0 +1,17 @@
+<%= render :partial => "refinery/themes/admin/shared/theme_assets" %>
+<%= render "refinery/themes/admin/shared/actions" %>
+
+<section class="clearfix one_list" id="records">
+    <%= form_tag(themes_admin_themes_path, :multipart => true) do |f| %>
+        <div class='field'>
+            <label for="zip_file">ZIP File:</label>
+            <%= file_field_tag 'zip_file', class: 'widest' %>
+        </div>
+        <div class="form-actions">
+            <div class="form-actions-right"><%= submit_tag "Upload" %></div>
+        </div>
+    <% end %>
+</section>
+
+
+

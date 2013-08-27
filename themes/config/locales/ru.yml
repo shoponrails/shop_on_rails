@@ -1,0 +1,14 @@
+ru:
+  refinery:
+    plugins:
+      spreefinery_themes:
+        title: Темы
+    themes:
+      admin:
+        themes:
+          actions:
+            upload: Загрузить тему
+            reset: Переустановить тему
+            browse: Каталог тем
+            settings: Настройки текущей темы
+            editor: Редактор текущей темы

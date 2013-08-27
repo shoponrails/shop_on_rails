@@ -1,0 +1,19 @@
+<h1>Notes</h1>
+
+<code>
+    # add to model
+    # include LiquidMapper
+    module Liquid
+        module Core
+            module LiquidMapper
+                def self.included(base)
+                    base.class_eval do
+                        base.attribute_names.each do |attribute|
+                            liquid_methods attribute.to_sym
+                        end
+                    end
+                end
+            end
+        end
+    end
+</code>

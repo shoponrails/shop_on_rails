@@ -1,9 +1,11 @@
-# -*- encoding: utf-8 -*-
+# encoding: UTF-8
+
+version = File.read(File.expand_path('../VERSION',__FILE__)).strip
 
 Gem::Specification.new do |gem|
   gem.name          = "shop_on_rails"
-  gem.version       = "0.0.1RC1"
-  gem.authors       = ["Alexander Negoda"]
+  gem.version       =  version
+  gem.author       = ["Alexander Negoda"]
   gem.email         = ["alexander.negoda@gmail.com"]
   gem.description   = "ShopOnRails.org"
   gem.summary       = "The ShopOnRails E-Commerce Engine"
@@ -16,10 +18,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.required_ruby_version = '>= 1.9.3'
 
-  gem.add_dependency "spreefinery_core"
-  gem.add_dependency "spreefinery_themes"
-  gem.add_dependency "refinerycms-blog"
-  gem.add_dependency "refinerycms-inquiries"
+  gem.add_dependency "spreefinery_core", version
+  gem.add_dependency "spreefinery_themes", version
+
   gem.add_development_dependency(%q<jeweler>)
   gem.add_development_dependency(%q<simplecov>)
 

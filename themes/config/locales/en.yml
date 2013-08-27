@@ -1,0 +1,14 @@
+en:
+  refinery:
+    plugins:
+      spreefinery_themes:
+        title: Themes
+    themes:
+      admin:
+        themes:
+          actions:
+            upload: Upload New Theme
+            reset: Re-Install Theme
+            browse: Browse Themes
+            settings: Current Theme Settings
+            editor: Current Theme Editor

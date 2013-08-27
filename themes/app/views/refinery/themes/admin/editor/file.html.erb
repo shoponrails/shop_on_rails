@@ -1,0 +1,50 @@
+<div class="form-actions">
+    <div class="form-actions-left">
+        <a href="javascript:CodeMirrorManager.autoFormatSelection()" class="button">Autoformat</a>
+        <a href="javascript:CodeMirrorManager.commentSelection(true)" class="button">Comment</a>
+        <a href="javascript:CodeMirrorManager.commentSelection(false)" class="button">Uncomment</a>
+    </div>
+    <div class="form-actions-right">
+        Select a theme:
+        <select onchange="CodeMirrorManager.selectTheme()" id=select>
+            <option selected>default</option>
+            <option>ambiance</option>
+            <option>blackboard</option>
+            <option>cobalt</option>
+            <option>eclipse</option>
+            <option>elegant</option>
+            <option>erlang-dark</option>
+            <option>lesser-dark</option>
+            <option>monokai</option>
+            <option>neat</option>
+            <option>night</option>
+            <option>rubyblue</option>
+            <option>solarized dark</option>
+            <option>solarized light</option>
+            <option>twilight</option>
+            <option>vibrant-ink</option>
+            <option>xq-dark</option>
+        </select>
+    </div>
+</div>
+
+<textarea cols="20" rows="20" id="editor"><%= raw @content %></textarea>
+<form method="post" id="form_for_file" enctype="multipart/form-data" class="edit_file"
+      action="<%= save_file_themes_admin_editor_url %>" accept-charset="UTF-8">
+    <div style="margin: 0pt; padding: 0pt; display: inline;">
+        <input type="hidden" value="✓" name="utf8">
+        <input type="hidden" value="<%= @related_path %>" name="file_name">
+        <input type="hidden" id="file_content" name="file_content">
+        <%= token_tag(nil) %>
+    </div>
+</form>
+
+<div class="form-actions">
+    <div class="form-actions-right">
+        <%= image_tag "spinner.gif", :style => "display:none", :id => 'spinner', :class => "spinner" %>
+        <input class="button" type="submit" value="Save" name="commit" id="file_submit">
+    </div>
+</div>
+
+<!--<iframe id=preview></iframe>-->
+<%= javascript_tag "var codeMirrorManager = new CodeMirrorManager('editor', '#{@content_type}');" %>

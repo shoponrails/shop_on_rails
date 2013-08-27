@@ -1,0 +1,50 @@
+/*
+ *= require fancybox/jquery.fancybox
+ *= require jquery.jgrowl
+ *= require codemirror/codemirror
+ *= require codemirror/util/simple-hint
+ *= require codemirror/util/dialog.css
+ *= require codemirror/theme/neat
+ *= require codemirror/theme/elegant
+ *= require codemirror/theme/erlang-dark
+ *= require codemirror/theme/night
+ *= require codemirror/theme/monokai
+ *= require codemirror/theme/cobalt
+ *= require codemirror/theme/eclipse
+ *= require codemirror/theme/rubyblue
+ *= require codemirror/theme/lesser-dark
+ *= require codemirror/theme/xq-dark
+ *= require codemirror/theme/ambiance
+ *= require codemirror/theme/blackboard
+ *= require codemirror/theme/vibrant-ink
+ *= require codemirror/theme/solarized
+ *= require codemirror/theme/twilight
+ *= require_self
+*/
+
+#records table tr td {
+    padding-top: 20px;
+}
+
+a.fancybox {
+    text-align: center;
+    border-bottom: none !important;
+}
+
+a.fancybox-close {
+    border-bottom: none !important;
+}
+
+.screenshot {
+    width: 100%;
+}
+
+.fullwidth {
+    width: 98%;
+}
+
+.theme-info {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+}

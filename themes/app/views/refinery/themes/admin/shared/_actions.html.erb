@@ -1,0 +1,19 @@
+<aside id='actions'>
+    <ul>
+        <li>
+            <%= link_to t('refinery.themes.admin.themes.actions.browse'), refinery.themes_admin_themes_path,
+                        :class => 'page_copy_icon' %>
+        </li>
+        <li>
+            <%= link_to t('refinery.themes.admin.themes.actions.upload'), refinery.upload_themes_admin_themes_path,
+                        :class => 'add_icon' %>
+        </li>
+        <li>
+            <%= link_to t('refinery.themes.admin.themes.actions.editor'), refinery.root_themes_admin_editor_url,
+                        :class => 'folder_icon' %>
+        </li>
+    </ul>
+    <%= yield :actions %>
+</aside>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/backend') %>

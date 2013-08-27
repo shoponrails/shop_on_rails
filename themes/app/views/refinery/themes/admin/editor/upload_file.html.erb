@@ -1,0 +1,16 @@
+<%= render :partial => "refinery/themes/admin/shared/theme_assets" %>
+<section class="clearfix one_list" id="records">
+    <%= form_tag(upload_themes_admin_editor_path, :multipart => true) do |f| %>
+        <%= hidden_field_tag 'path', @path %>
+        <div class='field'>
+            <label for="file">Select File:</label>
+            <%= file_field_tag 'file', class: 'widest' %>
+        </div>
+        <div class="form-actions">
+            <div class="form-actions-right"><%= submit_tag "Upload" %></div>
+        </div>
+    <% end %>
+</section>
+
+
+
