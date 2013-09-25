@@ -1,12 +1,5 @@
 #coding: utf-8
 namespace :shop_on_rails do
-  desc 'Fresh setup with the Spree samples'
-  task :setup_with_samples => :environment do
-    puts "Removing a public/spree folder..."
-    `rm -rf #{Rails.root}/public/spree`
-    `cd #{Rails.root} && bundle exec rake shop_on_rails:setup --trace`
-    `cd #{Rails.root} && bundle exec rake spree_sample:load --trace`
-  end
 
   desc 'Refresh db without the Spree samples'
   task :refresh_db => :environment do
@@ -15,12 +8,12 @@ namespace :shop_on_rails do
       ActiveRecord::Base.connection.drop_table x
     end
 
-    puts "Invoking: bundle exec rake db:migrate --trace ..."
+    puts "Invoking: bundle exec rake db:migrate --trace"
     `cd #{Rails.root} && bundle exec rake db:migrate --trace`
     puts "Invoking:  bundle exec rake db:seed --trace ..."
     `cd #{Rails.root} && bundle exec rake db:seed --trace`
 
-    puts "Invoking: SpreefineryCore::Engine.load_seed ..."
+    puts "Invoking: SpreefineryCore::Engine.load_seed"
     SpreefineryCore::Engine.load_seed
   end
 
@@ -62,7 +55,7 @@ namespace :shop_on_rails do
     puts "Invoking: bundle exec rake spreefinery_core:install:migrations ..."
     `cd #{Rails.root} && bundle exec rake spreefinery_core:install:migrations`
     puts "Invoking: bundle exec rake shop_on_rails:refresh_db ..."
-    `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db`
+    `cd #{Rails.root} && bundle exec rake shop_on_rails:refresh_db --trace`
   end
 
   desc 'Refresh db without the Spree samples'
