@@ -71,7 +71,7 @@ namespace :shop_on_rails do
 
     3.times.map{
       Refinery::Page.create(
-          :parent_id => Refinery::Page.find_by_slug('about').id,
+          :parent_id => Refinery::Page.where(:slug => "about").first.id,
           :title => Faker::Lorem.sentence,
           :menu_title => Faker::Lorem.words(2).join(' ').capitalize,
           :deletable => true,
@@ -111,7 +111,7 @@ namespace :shop_on_rails do
     <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
     ERB
 
-    frontpage = Refinery::Page.find_by_slug("home")
+    frontpage = Refinery::Page.where(:slug => "home").first
     frontpage.parts << ::Refinery::PagePart.create(title: "hero-unit", body: herounit.html_safe, refinery_page_id: frontpage.id)
     frontpage.save
 
