@@ -4,8 +4,6 @@ module Refinery
   module Themes
     class Theme < Refinery::Core::BaseModel
 
-      attr_accessible :name, :description, :position
-
       def default_assigns(str)
         yaml = YAML::load(str)["assigns"] || false
         return {} unless yaml
@@ -23,7 +21,7 @@ module Refinery
         attr_accessor :content_type, :headers
 
         def current_theme_key
-          ::Refinery::Setting.find_or_set(:current_theme, "default")
+          ::Refinery::Setting.find_or_set(:current_theme, "default") if ActiveRecord::Base.connection.table_exists? 'refinery_settings'
         end
 
         def current_theme_config
@@ -31,7 +29,7 @@ module Refinery
         end
 
         def default_layout
-          ::Refinery::Setting.find_or_set(:default_layout, "site")
+          ::Refinery::Setting.find_or_set(:default_layout, "site") if ActiveRecord::Base.connection.table_exists? 'refinery_settings'
         end
 
         def theme_path(theme_dir=current_theme_key)

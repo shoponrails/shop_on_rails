@@ -2,12 +2,10 @@ module Refinery
   module Themes
     class ThemeController < ::ApplicationController
 
-      def sreenshot
+      def screenshot
         send_data IO.read(File.join(Refinery::Themes::Theme.theme_path(params[:key]), "config/image.png")),
                   :disposition => "inline", :stream => false
       end
-
-      caches_page :asset
 
       def asset
         file_path = File.join(Refinery::Themes::Theme.theme_path, "assets", params[:mime_type], "#{params[:file_path]}.#{params[:format]}")
