@@ -18,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'spree_i18n'
 
   gem.add_dependency 'refinerycms'
-  gem.add_dependency 'refinerycms-i18n'
   #gem.add_dependency 'refinerycms-settings'
   gem.add_development_dependency 'colorize'
   gem.add_development_dependency 'machinist'
