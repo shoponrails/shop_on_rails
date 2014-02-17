@@ -17,8 +17,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'rubyzip'
   s.add_dependency 'clot_engine'
   s.add_dependency 'liquid'
-  s.add_dependency 'compass'
-  s.add_dependency 'compass-rails'
-  s.add_dependency 'jquery-ui-rails'
-  s.add_dependency 'jquery-ui-sass-rails'
 end
