@@ -8,10 +8,12 @@ Refinery::Core::Engine.routes.prepend do
   namespace :themes, :path => '' do
     namespace :admin, :path => 'refinery' do
       scope :path => 'themes' do
-        root :to => "themes#index", :via => :get
 
         resource :editor, :controller => 'editor' do
-          root :to => "editor#index", :via => :get
+
+          member do
+            get :index
+          end
 
           collection do
             post :list
