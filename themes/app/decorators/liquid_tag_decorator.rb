@@ -2,8 +2,8 @@ Liquid::Tag.class_eval do
   include Clot::TagHelper
   include Spree::BaseHelper
 
-  def initialize(tag_name, markup, tokens)
-    unless markup.empty?
+  def initialize(tag_name, markup, options)
+    unless markup.nil?
       @attributes = {}
       markup.scan(Liquid::TagAttributes) do |key, value|
         @attributes[key] = value
@@ -12,7 +12,8 @@ Liquid::Tag.class_eval do
 
     @tag_name   = tag_name
     @markup     = markup
-    parse(tokens)
+    @options    = options
+    parse(options)
   end
 
 
