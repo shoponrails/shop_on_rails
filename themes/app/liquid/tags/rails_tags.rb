@@ -107,29 +107,29 @@ class UrlHelper < Liquid::Tag
 # sample usage:
 # <a href="{% url_helper product_path, product %}">{{ product.name }}</a>
 # product_path - rails helper
-# product - AR-object
+# product - object
 
-  #include Clot::TagHelper
+  include Clot::TagHelper
 
-=begin
-  def initialize(tag_name, markup, tokens)
+  def initialize(tag_name, markup, options)
     unless markup.empty?
       @attributes = []
-      markup.scan(Liquid::QuotedFragment) do |value|
+      markup.scan(Liquid::TagAttributes) do |value|
         @attributes << value
       end
     end
     super
   end
-=end
 
   def render(context)
     return '' if @attributes.empty?
 
-    @url_helper ||= @attributes['path']
     args = []
     @attributes.each do |key, value|
-      next if key.eql?('path')
+     if key.eql?('path')
+       @url_helper = value
+       next
+     end
       args << resolve_value(value, context)
     end
 

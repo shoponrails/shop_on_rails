@@ -17,7 +17,7 @@ module Liquid
   class ContentFor < Liquid::Block
     SyntaxHelp = "Syntax Error in tag 'content_for' - Valid syntax: content_for_[name]"
 
-    def initialize(tag_name, markup, tokens)
+    def initialize(tag_name, markup, options)
       if markup =~ /(#{VariableSignature}+)/
         @name = $1
       else
@@ -37,9 +37,6 @@ module Liquid
       context.registers[:action_view].view_flow.content[@name] = '' unless context.registers[:action_view].view_flow.content.has_key? @name
 
       context.registers[:action_view].view_flow.content[@name].concat(result.html_safe)
-
-      #context['content_for'][@name] = '' unless context['content_for'][@name]
-      #context['content_for'][@name].concat(result.html_safe)
 
       ''
 

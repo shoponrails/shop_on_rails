@@ -1,20 +1,33 @@
 class Spree::ProductDrop < Clot::BaseDrop
 
-  self.liquid_attributes = [:id, :name, :price, :permalink, :available_on, :shipping_category, :deleted_at,
-                            :meta_description, :meta_keywords, :product_option_types, :option_types, :product_properties,
-                            :properties, :images, :taxons, :master, :variants,  :variants_including_master
-  ]
-
-  def description
-    @source.description
-  end
+  self.liquid_attributes = [:id, :name, :description, :slug, :available_on, :shipping_category, :deleted_at, :meta_description, :meta_keywords]
 
   def master
     @source.master
   end
 
+  def prices
+    @source.prices
+  end
+
   def variants
     @source.variants
+  end
+
+  def stock_items
+    @source.stock_items
+  end
+
+  def tax_category
+    @source.tax_category
+  end
+
+  def classifications
+    @source.classifications
+  end
+
+  def available?
+    @source.available?
   end
 
   def has_variants?
@@ -27,6 +40,10 @@ class Spree::ProductDrop < Clot::BaseDrop
 
   def variants_including_master
     @source.variants_including_master
+  end
+
+  def total_on_hand
+    @source.total_on_hand
   end
 
   def option_types
@@ -45,8 +62,8 @@ class Spree::ProductDrop < Clot::BaseDrop
     @source.taxons
   end
 
-  def product_option_types
-    @source.product_option_types
+  def images
+    @source.images
   end
 
   def variant_images

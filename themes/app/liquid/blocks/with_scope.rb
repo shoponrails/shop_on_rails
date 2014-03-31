@@ -16,7 +16,7 @@ module Liquid
 
       TagAttributes = /(\w+|\w+\.\w+)\s*\:\s*(#{::Liquid::QuotedFragment})/
 
-      def initialize(tag_name, markup, tokens)
+      def initialize(tag_name, markup, options)
         @attributes = HashWithIndifferentAccess.new
 
         markup.scan(TagAttributes) do |key, value|

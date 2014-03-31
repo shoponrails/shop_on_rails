@@ -1,6 +1,6 @@
 class RenderRSS < Liquid::Block
 
-  def initialize(tag_name, markup, tokens)
+  def initialize(tag_name, markup, options)
     super
     @markup =  markup
     @attributes = {}
