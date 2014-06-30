@@ -37,7 +37,7 @@ module Refinery
         end
 
         def layout_raw(file_name)
-          File.read(theme_path.join("layouts/#{file_name}.liquid"))
+          File.read(theme_path.join("layouts/#{file_name}.*.liquid"))
         end
 
         def all

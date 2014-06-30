@@ -109,8 +109,6 @@ class UrlHelper < Liquid::Tag
 # product_path - rails helper
 # product - object
 
-  include Clot::TagHelper
-
   def initialize(tag_name, markup, options)
     unless markup.empty?
       @attributes = []
